@@ -136,18 +136,5 @@ Route::group(['prefix' => 'diploma'], function () {
     Route::put('{diploma}', [DiplomaController::class, 'update']);
 });
 
-// // Message routing
-// Route::get('/message', [MessageController::class, 'index']);
-// Route::post('/message', [MessageController::class, 'store'])->name('message');
-// Route::get('/message/{id}', [MessageController::class, 'show']);
-// Route::put('/message/{id}', [MessageController::class, 'update']);
-// Route::delete('/message/{id}', [MessageController::class, 'destroy']);
 
-// //Password reset routing
-
-// Route::post('request_reset', [PasswordResetController::class, 'requestReset'])->name('request_reset');
-
-// Route::post('verify_code', [PasswordResetController::class, 'verifyverificationcode'])->name('verify_code');
-
-// Route::post('reset_password', [PasswordResetController::class, 'resetPassword'])->name('reset_password');
 
