@@ -20,6 +20,10 @@ use App\Http\Controllers\LoginController;
 //     return view('welcome');
 // });
 
+
+
+
+
 // Guest Middleware Routes
 Route::middleware(['guest'])->group(function () {
     //protected routes goes here
