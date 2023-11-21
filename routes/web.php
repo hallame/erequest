@@ -106,39 +106,3 @@ Route::post('/login_post', [AuthController::class, 'login'])->name('login_post')
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
-//complaints routing
-Route::get('/complaint', [ComplaintController::class, 'index'])->name('complaint_all');
-Route::post('/complaint', [ComplaintController::class, 'store'])->name('complaint_send');
-Route::get('/complaint/{id}', [ComplaintController::class, 'show'])->name('complaint_one');
-Route::put('/complaint/{id}', [ComplaintController::class, 'update'])->name('complaint_update');
-Route::delete('/complaint/{id}', [ComplaintController::class, 'destroy'])->name('complaint_delete');
-//certificate routing
-Route::get('/certificates', [CertificateController::class, 'index']);
-Route::post('/certificate_send', [CertificateController::class, 'store'])->name('certificate_send');
-Route::get('/certificates/{certificate}', [CertificateController::class, 'show']);
-Route::put('/certificates/{certificate}', [CertificateController::class, 'update']);
-Route::delete('/certificates/{certificate}', [CertificateController::class, 'destroy']);
-
-
-//transcript routing
-Route::group(['prefix' => 'transcript'], function () {
-    Route::get('/', [TranscriptController::class, 'index']);
-    Route::post('/', [TranscriptController::class, 'store'])->name(('transcript'));
-
-    Route::get('{transcript}', [TranscriptController::class, 'show']);
-    Route::delete('{transcript}', [TranscriptController::class, 'destroy']);
-    Route::put('{transcript}', [TranscriptController::class, 'update']);
-});
-
-// Diploma routing
-Route::group(['prefix' => 'diploma'], function () {
-    Route::get('/', [DiplomaController::class, 'index']);
-    Route::post('/', [DiplomaController::class, 'store'])->name('diploma');
-
-    Route::get('{diploma}', [DiplomaController::class, 'show']);
-    Route::delete('{diploma}', [DiplomaController::class, 'destroy']);
-    Route::put('{diploma}', [DiplomaController::class, 'update']);
-});
-
-
-
