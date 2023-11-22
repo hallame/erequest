@@ -73,7 +73,7 @@ Gestion des réclamations de notes
                 <p style="font-size: larger; text-decoration: underline;">Information du document</p>
                 <!-- <label for="exam_type">Semestre:</label>
                 <select name="exam_type" id="exam_type">
-                  <option value="session normale">Semestre 1 </option>
+                  <option value="session normale">Semestre 1</option>
                   <option value="session de rattrapage">Semestre 2</option>
                 </select> -->
               </div>
